@@ -15,7 +15,7 @@ tags:
 最近闲来无事，尝试一下做个微信小程序demo，个人注册完成，拿到`APPID`，`APPSECRET`便开始开发。
 
 微信小程序采用`Javascript`开发，看生成的代码感觉跟`VUE`有点类似，都是`Js`写逻辑然后编译成类似`H5`的页面。
-
+<!-- more -->
 但是，没过一会就开始懵逼了，生成的代码里面有一个`wx.getUserInfo`方法，开发文档里面有一个`wx.login`方法，本来以为`wx.login`这个方法就是在进入小程序的时候弹出授权窗口请求用户授权，不过在调试的时候发现其实是`wx.getUserInfo`方法才是弹出请求授权窗口，那这个`wx.login`方法究竟是干什么的呢？
 
 ## `wx.getUserInfo`和`wx.login`

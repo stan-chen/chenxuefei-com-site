@@ -18,7 +18,7 @@ tags:
 最近有项目需要在一个程序中搭建两个Webservice服务器，监于程序是基于gsoap开发，研究了一下如何在程序中搭建两个Webservice服务器，流程如下。
 
 搭建两个webservice，最初的想法很简单，在用SOAPCPP2生成文件的时候，加入-Q参数，确保每个webservice处于每个单独的命名空间，可是添加到项目中，报错了：
-
+<!-- more -->
 ```
 
 1> : error LNK2001: 无法解析的外部符号 _soap_putheader

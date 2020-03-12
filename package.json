@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prebuild": "node build-scripts/merge-config.js > _merged.yml",
     "build": "hexo generate --config _config.yml,_merged.yml",
     "clean": "hexo clean",
     "deploy": "hexo deploy",

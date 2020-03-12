@@ -14,7 +14,7 @@ tags:
 
 GNU上有解答:
 
-
+<!-- more -->
 
 11.13 execinfo.h
 

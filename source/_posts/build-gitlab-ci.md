@@ -19,7 +19,7 @@ gitlab-ci全称是gitlab continuous integration的意思，也就是持续集成
 但是在使用gitlab ci需要在服务器进行一些配置，本文将探讨如何在自建Gitlab CE服务器上部署`docker`方式的CI
 
 本文的详细内容在[Gitlab Doc](https://docs.gitlab.com/ee/ci/runners/README.html#runners)上有详细描述
-
+<!-- more -->
 1. 采用Docker方式部署，首先需要拉取 `Gitlab Runner` 镜像：
     ```
     docker pull gitlab/gitlab-runner

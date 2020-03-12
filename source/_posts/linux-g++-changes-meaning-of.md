@@ -13,7 +13,7 @@ tags:
 ---
 
 程序源码：
-
+<!-- more -->
 ```
 
 typedef     ushort    word;

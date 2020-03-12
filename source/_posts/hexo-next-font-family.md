@@ -12,7 +12,7 @@ tags:
 ## 在Hexo nexT主题上字体添加多个字体的办法
 
 该博客采用的是Pages + Hexo + nexT，但是在调整字体的时候发现，只能添加一个字体，如果添加多个备用字体有引号的话，yml解析就会报错，查阅源码后发现，`source/css/_variables/base.styl`文件中是这样获取config文件的字体变量的
-
+<!-- more -->
 ```
 get_font_family(config) {
   custom_family = hexo-config('font.' + config + '.family')
