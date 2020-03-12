@@ -1,6 +1,11 @@
 'use strict';
+/*
+Some Merge Config From System Env
+ */
 
 const YAML = require('js-yaml');
+const url = require('url');
+const fs = require('fs');
 
 const envConfig = {
   enable: true,
@@ -30,3 +35,41 @@ let aliConfigStr = YAML.safeDump(
 );
 
 console.log(aliConfigStr);
+console.log('\n');
+
+let themeConfig = {
+  footer: {
+    beian: {
+      icp: process.env.BEIAN_ICP || '',
+      enable: !!process.env.BEIAN_ICP,
+    },
+  },
+};
+
+if (envConfig.enable) {
+  const origThemeConfig = YAML.safeLoad(
+    fs.readFileSync('themes/next/_config.yml')
+  );
+  let prefix = url.resolve(envConfig.oss_url, envConfig.oss_root);
+  const js = url.resolve(prefix, origThemeConfig.js);
+  const css = url.resolve(prefix, origThemeConfig.css);
+  const images = url.resolve(prefix, origThemeConfig.images);
+  const vendors = {
+    _internal: url.resolve(prefix, origThemeConfig.vendors._internal),
+  };
+  themeConfig = {
+    ...themeConfig,
+    ...{ js, css, images, vendors },
+  };
+}
+
+console.log(
+  YAML.safeDump(
+    {
+      theme_config: themeConfig,
+    },
+    {
+      sortKeys: true,
+    }
+  )
+);

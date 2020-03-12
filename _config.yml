@@ -7,7 +7,7 @@
 title: Hexo
 subtitle: ''
 description: Biu!Biu!Biu!
-keywords: "陈雪飞, 博客, IT, C++, Python, 总结, 开发问题, 软件开发, 编程"
+keywords: "陈雪飞, 博客, IT, C++, Python, Golang, 总结, 开发问题, 软件开发, 编程"
 author: 陈雪飞
 language: zh-CN
 timezone: Asia/Shanghai
@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://www.chenxuefei.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -101,6 +101,46 @@ theme: next
 deploy:
   type: ''
 
+all_minifier: true
+
+js_concator:
+  enable: false
+  bundle_path: '/js/bundle.js'
+  front: false
+  silent: false
+
+html_minifier:
+  enable: true
+  ignore_error: false
+  silent: false
+  exclude:
+
+css_minifier:
+  enable: true
+  silent: false
+  exclude:
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  silent: false
+  exclude:
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  silent: false
 
 asset_oss:
   enable: false
+
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
