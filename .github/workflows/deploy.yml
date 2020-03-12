@@ -20,6 +20,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Checkout submodule
+      uses: Mushus/checkout-submodule@v1.0.1
+      with:
+        submodulePath: themes/next
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -29,7 +33,6 @@ jobs:
       with:
         path: node_modules
         key: node_modules
-    - run: rm -rf themes/next && git submodule init && git submodule update
     - run: npm install hexo-cli -g
     - run: npm install
     - run: npm run build --if-present
