@@ -29,7 +29,7 @@ jobs:
       with:
         path: node_modules
         key: node_modules
-    - run: rm -rf themes/next && git submodule init && git submodule update && git submodule foreach git pull origin alioss_version
+    - run: rm -rf themes/next && git submodule init && git submodule update
     - run: npm install hexo-cli -g
     - run: npm install
     - run: npm run build --if-present
