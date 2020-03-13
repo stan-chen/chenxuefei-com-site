@@ -14,7 +14,7 @@ tags:
 
 关于这个`do_nothing()`函数是最令人迷惑的，按照一般思维，静态变量在程序`main()`开始之前就已经存在，那为什么需要加上一个`do_nothing()`？
 
-
+<!-- more -->
 
 原来我们漏掉了这个 `C++` 标准[`3.6.2 initialisation of non local variables.`](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3242.pdf)。
 

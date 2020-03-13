@@ -14,7 +14,7 @@ keywords: "爬虫, 相册, iCloud Photos"
 第一个想法便是爬虫，既然`iCloud`客户端无法安装，那Web总该可以吧，如果我能在本地端模拟一个Web浏览器，通过爬取iCloud Web页面不断抽取相册下载到本地，那功能也就实现了。  
 本着这个想法，去`Github`上搜索了一圈，看看有没有合适的库可以直接爬取`iCloud`，果然，和我有相同想法的人比较多，这里有一个Python实现的iCloud爬取引擎：[picklepete/pyicloud](https://github.com/picklepete/pyicloud)，直接clone下来看看，结果代码的photos引擎有点老了，现在的iCloud已经使用新的方式展示照片了，所以爬取照片出现了问题（不过现在这个repo已经修复了这个问题了，Python可以放心使用这个库）。  
 既然这个库没办法满足，那就自己动手写一个吧，当然爬虫的首要套路是得先分析这个网站到底是怎么玩的，经过我的推理（Chorme dev工具...），发现iCloud现在已经采用新的API方式获取照片信息，具体套路如下（以下的方式都必须存储Cookie，这个不必多说，具体怎么实现有很多种方式）：
-
+<!-- more -->
 - 首先通过接口登陆iCloud（`https://setup.icloud.com/setup/ws/1/accountLogin`），传递appid和password。
 - 如果需要二次验证，通过（`https://setup.icloud.com/setup/ws/1/validateVerificationCode`）传递发送到手机上的验证码，进行二次验证。
 - 如果二次验证过后，再次登录拿到Cookie Token，到这里你已经拿到通行证书了，可以访问iCloud大部分信息了。

@@ -12,7 +12,7 @@ tags:
 # 如何设置阿里云OSS的跨站请求
 
 今天把静态文件部署到OSS做CDN，`js`,`css`静态文件get正常，但是`font-awesome`的`woff`字体搞死弄不出来，`response`返回200，但是字节数老是0，导致图标显示不正确。
-
+<!-- more -->
 经过一番查看，原来是跨域导致了`CROS`。
 
 主页站点和CDN站点是两个不同源站，当主页载入了`font-awesome.css`的`stylesheet`载入之后，便开始从CDN站点载入字体文件，但是请求的`HOST`是主页站点，所以导致了`CROS`跨域请求，CDN返回错误。

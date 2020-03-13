@@ -13,7 +13,7 @@ tags:
 CentOS7.0 配置ftp服务器环境跟 Ubuntu 不一样，有很多需要注意的地方：
 
 1. firewalld 是否将vsftpd端口添加到通过列表，我一般是在`/etc/firewalld/zone/public.xml`中添加信任端口：
-
+<!-- more -->
 ```
 
 <port protocol="tcp" port="20"/>

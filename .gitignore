@@ -7,3 +7,4 @@ public/
 .deploy*/
 /_merged.yml
 /_multiconfig.yml
+/_secret.yml

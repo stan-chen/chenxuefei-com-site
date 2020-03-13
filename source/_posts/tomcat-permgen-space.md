@@ -13,7 +13,7 @@ tags:
 ---
 
 tomcat在本机部署没有问题，移动到另外的机子上运行就报错，错误如下：
-
+<!-- more -->
 > java.lang.OutOfMemoryError: PermGen space
 
 原来是内存不足，部署加载的jar包是沿用的默认内存，所以出现了内存不足的问题，解决办法如下：

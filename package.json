@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prebuild": "node build-scripts/merge-config.js > _merged.yml",
-    "build": "hexo generate --config _config.yml,_merged.yml",
+    "build": "hexo generate --config _config.yml,_secret.yml",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
@@ -15,7 +14,7 @@
   "dependencies": {
     "hexo": "^4.0.0",
     "hexo-all-minifier": "^0.5.3",
-    "hexo-asset-oss": "0.1.0",
+    "hexo-asset-oss": "0.1.1",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.6",
     "hexo-generator-category": "^1.0.0",

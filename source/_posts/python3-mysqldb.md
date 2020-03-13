@@ -10,7 +10,7 @@ tags:
 ---
 
 在python3之后，MySqlDb已经移除，替代的是PyMysql，在Django中，如果要使用最新的PyMysql作为数据库Engine，需要在__init__.py 中加入
-
+<!-- more -->
 > import pymysql
 
 > pymysql.install_as_MySQLdb()

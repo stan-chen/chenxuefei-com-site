@@ -11,7 +11,7 @@ tags:
 ---
 
 在上一篇文章 {% post_link build-gitlab-ci 在自建Gitlab上搭建CI %} 简述了在自建Gitlab CE上搭建好了CI服务，本篇文章将简述如何在Gitlab CE服务上搭建Pages服务。
-
+<!-- more -->
 ## 什么是Pages
 
 1. 首先说说`Github-Pages`
