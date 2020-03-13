@@ -43,7 +43,6 @@ var options = {
   },
 };
 console.log('现在开始提交' + nodes.length + '个站点');
-console.log(options);
 
 var req = http.request(options, function(res) {
   if (res.statusCode === 200) {
