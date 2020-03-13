@@ -38,4 +38,8 @@ jobs:
         npm run build --if-present
         rm -f _secret.yml
     - name: Deploy to server
-      run: echo "Deploy"
+      run: |
+        echo "${{ secrets.deployKey }}" > _key
+        echo "${{ secrets.deployBatchFile }}" > _batchfile
+        sftp -b _batchfile -i _key -P ${{ secrets.deployPort }} ${{ secrets.deployUser }}@${{ secrets.deployIp }}
+        rm -f _key _batchfile
