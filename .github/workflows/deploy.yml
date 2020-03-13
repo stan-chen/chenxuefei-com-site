@@ -40,16 +40,10 @@ jobs:
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.0
       with:
-        # username
         username: ${{ secrets.deployUser }}
-        # your sftp server
         server: ${{ secrets.deployIp }}
-        # your sftp server port, default to 22
         port: ${{ secrets.deployPort }}
-        # you can copy private_key from your *.pem file, keep format
         ssh_private_key: ${{ secrets.deployKey }}
-        # will put all file under this path
         local_path: public/*
-        # files will copy to under remote_path
-        remote_path: /www/chenxuefei-com-site/
+        remote_path: /chenxuefei.com.site/
   
