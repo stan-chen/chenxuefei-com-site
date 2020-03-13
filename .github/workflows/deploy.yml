@@ -47,3 +47,5 @@ jobs:
         local_path: public/*
         remote_path: /chenxuefei.com.site/
   
+    - name: Push site-map to baidu
+      run: npm run push-sitemap -- public/sitemap.xml ${{ secrets.baiduZzToken }}
