@@ -16,6 +16,8 @@ Recent versions of QEMU (I tried with 2.12.0) support a rotation_rate parameter.
 
 Here are the relevant bits of a libvirt configuration that I use for an OSX guest:
 
+<!-- more -->
+
 ```xml
 <domain type='kvm' xmlns:qemu='http://libvirt.org/schemas/domain/qemu/1.0'>
   ...
